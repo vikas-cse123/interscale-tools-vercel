@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register WhatsApp Number — Interscale Tools</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="logo.png" type="image/png">
+<style>
+.page-wrap.register-minimal{
+  max-width:560px;
+  padding:32px 20px 64px;
+}
+.register-minimal .page-title{
+  font-size:28px;
+  font-weight:800;
+  letter-spacing:-0.03em;
+  line-height:1.1;
+  color:var(--text);
+  margin:0 0 28px 0;
+}
+.register-minimal .form-card{
+  max-width:560px;
+  margin:0 auto;
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="logo.png" alt="Interscale Tools logo" width="40" height="40">
+      <div><div class="brand-name">Interscale Tools</div><div class="brand-sub"></div></div>
+    </a>
+  </div>
+</header>
+
+<div class="page-wrap register-minimal">
+  <a class="back-link" href="index.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M11 6L5 12l6 6"/></svg>
+    Back
+  </a>
+
+  <h1 class="page-title">Register WhatsApp Number</h1>
+
+  <div class="form-card">
+    <form id="registerForm" novalidate>
+      <div class="field">
+        <label class="label" for="phoneId">Phone Number ID <span>*</span></label>
+        <div class="input-wrap">
+          <input class="input" id="phoneId" name="phoneId" type="text" autocomplete="off" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="accessToken">Permanent Access Token <span>*</span></label>
+        <div class="input-wrap">
+          <input class="input" id="accessToken" name="accessToken" type="password" autocomplete="off" required>
+          <button class="toggle-btn" type="button" data-toggle="accessToken" aria-label="Show token">
+            <svg class="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3.2"/></svg>
+            <svg class="eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" style="display:none"><path d="M9.9 9.9A3.2 3.2 0 0 0 12 15.2"/><path d="M14.1 14.1A3.2 3.2 0 0 1 12 8.8"/><path d="M2.5 12s4-7 10.5-7c2.4 0 4.6.9 6.4 2.2"/><path d="M21.5 12s-4 7-10.5 7c-2.4 0-4.6-.9-6.4-2.2"/><path d="M3 3l18 18"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <button class="btn-primary" type="submit" id="submitBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.09V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+        Register Number
+      </button>
+    </form>
+
+    <div class="alert" id="formAlert" role="alert"></div>
+
+    <div class="result" id="resultPanel">
+      <div class="result-head" id="resultHead">
+        <strong><span class="dot"></span><span id="resultTitle">Result</span></strong>
+        <span class="result-meta" id="resultMeta"></span>
+      </div>
+      <div class="result-body">
+        <pre id="resultJson"></pre>
+        <dl class="kv" id="resultKv" style="display:none"></dl>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/register-whatsapp.js"></script>
+</body>
+</html>
