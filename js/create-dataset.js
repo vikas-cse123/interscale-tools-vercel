@@ -12,7 +12,7 @@
   var resultJson = document.getElementById('dsJson');
   var resultKv = document.getElementById('dsKv');
 
-  var DATASET_NAME = 'CR7 Tour & Travels Dataset';
+  var DATASET_NAME = 'My Dataset ID';
 
   document.querySelectorAll('[data-toggle]').forEach(function (btn) {
     btn.addEventListener('click', function () {
